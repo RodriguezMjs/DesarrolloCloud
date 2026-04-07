@@ -20,7 +20,7 @@ project-root/
 │
 ├── internal/                   # Código privado (core del sistema)
 │
-│   ├── domain/                # 🧠 Dominio (LO MÁS IMPORTANTE)
+│   ├── domain/                # Dominio 
 │   │   ├── entities/
 │   │   │   ├── user.go
 │   │   │   ├── role.go
@@ -51,7 +51,7 @@ project-root/
 │   │       ├── report_generated.go
 │   │       └── user_not_reported.go
 │   │
-│   ├── application/           # 🚀 Casos de uso (use cases)
+│   ├── application/           # Casos de uso (use cases)
 │   │   ├── usecases/
 │   │   │   ├── create_task.go
 │   │   │   ├── update_task.go
@@ -101,7 +101,7 @@ project-root/
 │   │   └── notifications/
 │   │       └── notification_service.go
 │   │
-│   └── interfaces/            # 🔄 Adaptadores (entrada)
+│   └── interfaces/            # Adaptadores (entrada)
 │       └── api/
 │           ├── controllers/
 │           │   ├── task_controller.go

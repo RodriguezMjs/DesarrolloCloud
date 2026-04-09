@@ -125,5 +125,13 @@ INSERT INTO roles (name) VALUES
 ('PROFESOR'),
 ('ESTUDIANTE');
 
+WITH new_user AS (
+  INSERT INTO users (name, email, password_hash)
+  VALUES ('Test User', 'test@test.com', '$2a$10$mMiZQtzpsQ8KKKc1DYeNP.F.txM6F9xcJvSEFS8NEtEmWXife.0JO')
+  RETURNING id
+)
+INSERT INTO user_roles (user_id, role_id)
+SELECT id, 1 FROM new_user;
+
 INSERT INTO academic_periods (name, start_date, end_date, is_active)
 VALUES ('2026-1', '2026-01-15', '2026-06-15', true);

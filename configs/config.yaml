@@ -1,0 +1,12 @@
+database:
+  url: "postgres://postgres:postgres@db:5432/projectbackend?sslmode=disable"
+  driver: "postgres"
+  max_conns: 10
+
+#TODO: Cambiar secret y expiration_hours en produccion
+jwt:
+  secret: "secret-key-change-in-production"
+  expiration_hours: 24
+
+server:
+  port: "8080"
